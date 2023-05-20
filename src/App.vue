@@ -1,5 +1,25 @@
-<template></template>
+<template>
+  <div>
+    <main-vue />
+  </div>
+</template>
 
-<script></script>
+<script>
+import mainVue from "./components/main.vue";
 
-<style></style>
+export default {
+  name: "app",
+  components: {
+    mainVue: mainVue,
+  },
+};
+</script>
+
+<style>
+body {
+  background-image: url("./assets/home/background-home-tablet.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
