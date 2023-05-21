@@ -9,4 +9,28 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+body {
+  background-image: url("../assets/home/background-home-tablet.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (max-height: 680px) {
+  body {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+}
+
+@media screen and (min-width: 681px) {
+  body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+}
+</style>
