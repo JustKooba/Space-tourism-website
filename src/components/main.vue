@@ -21,12 +21,14 @@ export default {};
 </script>
 
 <style>
-@font-face {
-  font-family: majesty-display;
-  src: url("../assets/fonts/Majesty Bold.ttf");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap");
 body {
   background-image: url("../assets/home/background-home-tablet.jpg");
   -webkit-background-size: cover;
@@ -35,6 +37,7 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
 
 @media screen and (max-height: 680px) {
@@ -45,8 +48,6 @@ body {
 
 @media screen and (min-width: 681px) {
   body {
-    min-height: 100vh;
-    min-width: 100vw;
     background-image: url("../assets/home/background-home-desktop.jpg");
   }
 }
@@ -55,29 +56,29 @@ body {
 .home-desc {
   color: #a9aab8;
   text-align: center;
-  font-family: "lato", sans-serif;
-  line-height: 30px;
+  font-family: "Barlow", sans-serif;
 }
 .home-desc {
+  line-height: 30px;
   font-size: 20px;
+  text-align: center;
+  padding: 7px;
 }
 .home-subtitle {
   text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 15px;
-  font-size: 22px;
-  font-weight: 100;
-  margin-right: 20px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 .home-title {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-family: "majesty-display", sans-serif;
-  font-size: 100px;
-  letter-spacing: 25px;
-  margin-bottom: 20px;
+  font-family: "Bellefair", sans-serif;
+  font-size: 70px;
+  letter-spacing: 12px;
+  margin-bottom: 10px;
   margin-top: 15px;
 }
 
@@ -91,17 +92,22 @@ body {
   width: 170px;
   font-size: 30px;
   text-transform: uppercase;
-  font-family: "lato", sans-serif;
+  font-family: "Bellefair", sans-serif;
   font-weight: 400;
-  margin-top: 20vh;
+  margin-top: 10rem;
+}
+
+@media (max-width: 400px) {
+  .explore {
+    margin-top: 5rem;
+  }
 }
 
 .content {
+  text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
+  align-items: center;
 }
 
 .menu-content {
