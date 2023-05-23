@@ -1,9 +1,19 @@
 <template>
-  <div class="menu">
-    <img src="../assets/shared/icon-hamburger.svg" alt="three lines, menu" />
+  <header>
+    <img src="../assets/shared/logo.svg" />
+    <div class="menu">
+      <img
+        src="../assets/shared/icon-hamburger.svg"
+        class="menu-img"
+        alt="three lines, menu"
+      />
 
-    <div class="menu-content">00 Home 01 Destination 02 Crew 03 Technology</div>
-  </div>
+      <div class="menu-content">
+        00 Home 01 Destination 02 Crew 03 Technology
+      </div>
+    </div>
+  </header>
+
   <div class="content">
     <h2 class="home-subtitle">So, you want to travel to</h2>
     <h1 class="home-title">Space</h1>
@@ -26,7 +36,7 @@ export default {};
   padding: 0;
   box-sizing: border-box;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap");
 body {
@@ -56,27 +66,28 @@ body {
 .home-desc {
   color: #a9aab8;
   text-align: center;
-  font-family: "Barlow", sans-serif;
 }
 .home-desc {
   line-height: 30px;
   font-size: 20px;
   text-align: center;
-  padding: 7px;
+  padding: 12px;
+  font-family: "Barlow", sans-serif;
 }
 .home-subtitle {
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 25px;
   letter-spacing: 2px;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .home-title {
-  color: #fff;
+  color: white;
   text-align: center;
   text-transform: uppercase;
   font-family: "Bellefair", sans-serif;
-  font-size: 70px;
+  font-size: 80px;
   letter-spacing: 12px;
   margin-bottom: 10px;
   margin-top: 15px;
@@ -112,5 +123,17 @@ body {
 
 .menu-content {
   display: none;
+}
+
+.menu img {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 25px;
 }
 </style>
