@@ -6,10 +6,16 @@
         src="../assets/shared/icon-hamburger.svg"
         class="menu-img"
         alt="three lines, menu"
+        @click="menuClick"
       />
 
-      <div class="menu-content">
-        00 Home 01 Destination 02 Crew 03 Technology
+      <div class="menu-content" :style="{ display: menuDisplay }">
+        <ul>
+          <li>00 Home</li>
+          <li>01 Destination</li>
+          <li>02 Crew</li>
+          <li>03 Technology</li>
+        </ul>
       </div>
     </div>
   </header>
@@ -27,7 +33,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      menuDisplay: "none",
+    };
+  },
+  methods: {
+    menuClick() {
+      if (this.menuDisplay == "none") {
+        this.menuDisplay = "flex";
+      } else {
+        this.menuDisplay = "none";
+      }
+    },
+  },
+};
 </script>
 
 <style>
@@ -131,6 +152,11 @@ body {
 
 .menu-content {
   display: none;
+  color: #a9aab8;
+  position: absolute;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  opacity: 0.7;
 }
 
 .menu img {
