@@ -99,18 +99,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 170px;
-  width: 170px;
-  font-size: 30px;
+  height: 200px;
+  width: 200px;
+  font-size: 35px;
   text-transform: uppercase;
   font-family: "Bellefair", sans-serif;
   font-weight: 400;
   margin-top: 10rem;
+  cursor: pointer;
+}
+
+.explore:active {
+  transform: scale(0.9);
+  transition: ease-in-out 0.1s;
 }
 
 @media (max-width: 400px) {
   .explore {
-    margin-top: 5rem;
+    margin-top: -0.2rem;
+    height: 170px;
+    width: 170px;
   }
 }
 
