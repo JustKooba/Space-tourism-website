@@ -48,7 +48,8 @@ export default {
     },
     listClick() {
       this.menuDisplay = "none";
-      this.$emit("listClick");
+      this.clickedEl = event.target.innerText;
+      this.$emit("listClick", this.clickedEl);
     },
   },
 };

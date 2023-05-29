@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     listClick() {
+      console.log(this.clickedEl);
       this.contentDisplay = "flex";
     },
   },
