@@ -1,5 +1,5 @@
 <template>
-  <header-vue />
+  <header-vue v-on:listClick="listClick" />
   <div class="content" :style="{ display: contentDisplay }">
     <h2 class="home-subtitle">So, you want to travel to</h2>
     <h1 class="home-title">Space</h1>
@@ -11,7 +11,7 @@
     <button class="explore">Explore</button>
   </div>
   <div class="destinations">
-    <destinations-vue v-on:listClick="listClick" />
+    <destinations-vue />
   </div>
 </template>
 
@@ -30,9 +30,7 @@ export default {
   },
   methods: {
     listClick() {
-      if () {
-        this.contentDisplay = "flex";
-      }
+      this.contentDisplay = "flex";
     },
   },
 };

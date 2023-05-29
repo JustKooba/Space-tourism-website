@@ -35,6 +35,7 @@ export default {
   data() {
     return {
       menuDisplay: "none",
+      clickedEl: "",
     };
   },
   methods: {
@@ -47,9 +48,7 @@ export default {
     },
     listClick() {
       this.menuDisplay = "none";
-      if (event.target.innerText === "home") {
-        this.$emit("listClick", this.clickedEl);
-      }
+      this.$emit("listClick");
     },
   },
 };
