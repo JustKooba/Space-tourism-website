@@ -16,7 +16,10 @@
             @click="menuClick"
           />
           <ul>
-            <li><span class="num">00</span> Home</li>
+            <li>
+              <span class="num">00</span>
+              <span @click="listClick">Home</span>
+            </li>
             <li><span class="num">01</span> Destination</li>
             <li><span class="num">02</span> Crew</li>
             <li><span class="num">03</span> Technology</li>
@@ -40,6 +43,12 @@ export default {
         this.menuDisplay = "flex";
       } else {
         this.menuDisplay = "none";
+      }
+    },
+    listClick() {
+      this.menuDisplay = "none";
+      if (event.target.innerText === "home") {
+        this.$emit("listClick", this.clickedEl);
       }
     },
   },
@@ -103,6 +112,7 @@ export default {
   font-weight: 700;
   font-size: 24px;
   font-family: "Bellefair", sans-serif;
+  margin-right: 5px;
 }
 
 header {
