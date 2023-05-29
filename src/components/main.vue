@@ -1,30 +1,5 @@
 <template>
-  <header>
-    <img src="../assets/shared/logo.svg" />
-    <div class="menu">
-      <img
-        src="../assets/shared/icon-hamburger.svg"
-        class="menu-img"
-        alt="three lines, menu"
-        @click="menuClick"
-      />
-
-      <div class="menu-content" :style="{ display: menuDisplay }">
-        <img
-          src="../assets/shared/icon-close.svg"
-          alt="X Icon"
-          @click="menuClick"
-        />
-        <ul>
-          <li><span class="num">00</span> Home</li>
-          <li><span class="num">01</span> Destination</li>
-          <li><span class="num">02</span> Crew</li>
-          <li><span class="num">03</span> Technology</li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
+  <header-vue />
   <div class="content">
     <h2 class="home-subtitle">So, you want to travel to</h2>
     <h1 class="home-title">Space</h1>
@@ -38,20 +13,10 @@
 </template>
 
 <script>
+import headerVue from "./header.vue";
 export default {
-  data() {
-    return {
-      menuDisplay: "none",
-    };
-  },
-  methods: {
-    menuClick() {
-      if (this.menuDisplay == "none") {
-        this.menuDisplay = "flex";
-      } else {
-        this.menuDisplay = "none";
-      }
-    },
+  components: {
+    "header-vue": headerVue,
   },
 };
 </script>
@@ -133,6 +98,7 @@ body {
   font-weight: 400;
   margin-top: 10rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .explore:active {
@@ -153,63 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.menu-content {
-  display: none;
-  color: #fff;
-  position: absolute;
-  background-color: rgba(27, 27, 27, 0.6);
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  height: 100%;
-  top: 0;
-  width: 70%;
-  right: 0.1px;
-  z-index: 1045;
-  font-family: "Barlow Condensed", sans-serif;
-}
-
-.menu-content ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  font-size: 27px;
-  margin-left: 35px;
-  margin-top: 100px;
-}
-
-.menu-content ul li {
-  margin-top: 2rem;
-}
-
-.menu-content ul li:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.menu-content img {
-  height: 30px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.menu img {
-  cursor: pointer;
-}
-
-.num {
-  font-weight: 700;
-  font-size: 24px;
-  font-family: "Bellefair", sans-serif;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin-bottom: 25px;
+  transition: 0.3s ease-in-out;
 }
 </style>
