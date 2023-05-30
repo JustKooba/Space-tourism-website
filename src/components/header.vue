@@ -35,7 +35,6 @@ export default {
   data() {
     return {
       menuDisplay: "none",
-      clickedEl: "",
     };
   },
   methods: {
@@ -47,9 +46,10 @@ export default {
       }
     },
     listClick() {
+      let clickedEl = event.target.innerText;
+      console.log(clickedEl);
       this.menuDisplay = "none";
-      this.clickedEl = event.target.innerText;
-      this.$emit("listClick", this.clickedEl);
+      this.$emit("listClick", clickedEl);
     },
   },
 };

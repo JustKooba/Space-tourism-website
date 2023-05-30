@@ -29,9 +29,11 @@ export default {
     };
   },
   methods: {
-    listClick() {
-      console.log(this.clickedEl);
-      this.contentDisplay = "flex";
+    listClick(clickedEl) {
+      console.log(clickedEl);
+      if (clickedEl == "Home") {
+        this.contentDisplay = "flex";
+      }
     },
   },
 };
