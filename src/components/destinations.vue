@@ -10,6 +10,16 @@
       <button class="dest-btn">Europa</button>
       <button class="dest-btn">Titan</button>
     </div>
+
+    <div
+      class="destination-desc"
+      v-for="destination in destinations"
+      :key="destination"
+    >
+      <h3>{{ destination.name }}</h3>
+      <p>{{ destination.description }}</p>
+      <div class="distance"></div>
+    </div>
   </div>
 </template>
 
@@ -83,5 +93,9 @@ h2 {
 .buttons button:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.destination-desc {
+  color: #fff;
 }
 </style>
