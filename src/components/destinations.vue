@@ -2,7 +2,7 @@
   <div class="content">
     <h2><span class="num dest">01</span>Pick your destination</h2>
     <div class="destination" v-if="destinations.length > 0">
-      <img :src="getImagePath(destinations[0].images.webp)" alt="Image" />
+      <img :src="getImagePath(destinations[0].images.png)" alt="Image" />
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
   },
 };
 </script>
+
 <style>
 .content {
   width: 100vw;
