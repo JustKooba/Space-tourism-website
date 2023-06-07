@@ -1,23 +1,25 @@
 <template>
   <div class="content">
     <h2 class="pick"><span class="num dest">01</span>Pick your destination</h2>
-    <div class="destination" v-if="destinations.length > 0">
-      <img :src="getImagePath(destinations[0].images.png)" alt="Image" />
-    </div>
-    <div class="buttons">
-      <button class="dest-btn">Moon</button>
-      <button class="dest-btn">Mars</button>
-      <button class="dest-btn">Europa</button>
-      <button class="dest-btn">Titan</button>
-    </div>
 
-    <div
-      class="destination-desc"
-      v-for="destination in destinations"
-      :key="destination"
-    >
-      <h3>{{ destination.name }}</h3>
-      <p>{{ destination.description }}</p>
+    <div class="destination-desc" v-if="selectedDestination">
+      <img :src="getImagePath(selectedDestination.images.png)" alt="Image" />
+      <div class="buttons">
+        <button class="dest-btn" @click="selectDestination('Moon')">
+          Moon
+        </button>
+        <button class="dest-btn" @click="selectDestination('Mars')">
+          Mars
+        </button>
+        <button class="dest-btn" @click="selectDestination('Europa')">
+          Europa
+        </button>
+        <button class="dest-btn" @click="selectDestination('Titan')">
+          Titan
+        </button>
+      </div>
+      <h3>{{ selectedDestination.name }}</h3>
+      <p>{{ selectedDestination.description }}</p>
       <div class="distance"></div>
     </div>
   </div>
@@ -30,14 +32,23 @@ export default {
   data() {
     return {
       destinations: [],
+      selectedDestination: null,
     };
   },
   mounted() {
     this.destinations = data.destinations;
+    this.selectedDestination = this.destinations.find(
+      (destination) => destination.name === "Moon"
+    );
   },
   methods: {
     getImagePath(image) {
       return require(`../assets/destination/${image}`);
+    },
+    selectDestination(destinationName) {
+      this.selectedDestination = this.destinations.find(
+        (destination) => destination.name === destinationName
+      );
     },
   },
 };
@@ -66,7 +77,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-.destination img {
+.destination-desc img {
   height: 180px;
 }
 
