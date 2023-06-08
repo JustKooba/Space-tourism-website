@@ -23,6 +23,8 @@
       <div class="distance">
         <p class="avg-distance">Avg Distance</p>
         <p class="avg-distance-num">{{ selectedDestination.distance }}</p>
+        <p class="travel">Est travel time</p>
+        <p class="travel-num">{{ selectedDestination.travel }}</p>
       </div>
     </div>
   </div>
@@ -129,11 +131,25 @@ h3 {
 }
 
 .avg-distance-num {
-  font-size: 30px;
+  font-size: 33px;
 }
 
 .avg-distance {
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 18px;
   color: #d0d6f9;
+  text-transform: uppercase;
+}
+
+.travel {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d0d6f9;
+  text-transform: uppercase;
+}
+
+.travel-num {
+  font-size: 33px;
 }
 </style>
