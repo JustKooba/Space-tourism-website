@@ -19,8 +19,11 @@
         </button>
       </div>
       <h3>{{ selectedDestination.name }}</h3>
-      <p>{{ selectedDestination.description }}</p>
-      <div class="distance"></div>
+      <p class="p-desc">{{ selectedDestination.description }}</p>
+      <div class="distance">
+        <p class="avg-distance">Avg Distance</p>
+        <p class="avg-distance-num">{{ selectedDestination.distance }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -88,7 +91,7 @@ h2 {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: #d0d6f9;
   display: flex;
 }
 
@@ -108,5 +111,29 @@ h2 {
 
 .destination-desc {
   color: #fff;
+}
+
+h3 {
+  font-size: 60px;
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.p-desc {
+  color: #d0d6f9;
+  margin-top: -20px;
+  font-size: 23px;
+  padding: 25px;
+  border-bottom: 1px solid #d0d6f9;
+}
+
+.avg-distance-num {
+  font-size: 30px;
+}
+
+.avg-distance {
+  font-size: 20px;
+  color: #d0d6f9;
 }
 </style>
