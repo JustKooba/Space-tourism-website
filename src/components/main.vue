@@ -11,7 +11,7 @@
     <button class="explore">Explore</button>
   </div>
   <div class="destinations">
-    <destinations-vue />
+    <destinations-vue :style="{ display: destStyle }" />
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
   },
   data() {
     return {
-      contentDisplay: "none",
+      contentDisplay: "flex",
+      destStyle: "none",
     };
   },
   methods: {
@@ -33,6 +34,10 @@ export default {
       console.log(clickedEl);
       if (clickedEl == "Home") {
         this.contentDisplay = "flex";
+        this.destStyle = "none";
+      } else if (clickedEl == "Destination") {
+        this.contentDisplay = "none";
+        this.destStyle = "flex";
       }
     },
   },

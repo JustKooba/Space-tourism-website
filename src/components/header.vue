@@ -20,7 +20,10 @@
               <span class="num">00</span>
               <span @click="listClick">Home</span>
             </li>
-            <li><span class="num">01</span> Destination</li>
+            <li>
+              <span class="num">01</span>
+              <span @click="listClick">Destination</span>
+            </li>
             <li><span class="num">02</span> Crew</li>
             <li><span class="num">03</span> Technology</li>
           </ul>
