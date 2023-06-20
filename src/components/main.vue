@@ -8,7 +8,7 @@
       to outer space and not hover kind of on the edge of it. Well sit back, and
       relax because we’ll give you a truly out of this world experience!
     </p>
-    <button class="explore">Explore</button>
+    <button class="explore" @click="handleExplore">Explore</button>
   </div>
   <div class="destinations">
     <destinations-vue :style="{ display: destStyle }" />
@@ -39,6 +39,10 @@ export default {
         this.contentDisplay = "none";
         this.destStyle = "flex";
       }
+    },
+    handleExplore() {
+      this.contentDisplay = "none";
+      this.destStyle = "flex";
     },
   },
 };
