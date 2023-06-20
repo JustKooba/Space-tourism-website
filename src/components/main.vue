@@ -13,19 +13,24 @@
   <div class="destinations">
     <destinations-vue :style="{ display: destStyle }" />
   </div>
+  <div class="crew">
+    <crew />
+  </div>
 </template>
 
 <script>
 import headerVue from "./header.vue";
 import destinations from "./destinations.vue";
+import crew from "./crew.vue";
 export default {
   components: {
     "header-vue": headerVue,
     "destinations-vue": destinations,
+    crew: crew,
   },
   data() {
     return {
-      contentDisplay: "flex",
+      contentDisplay: "none",
       destStyle: "none",
     };
   },
