@@ -1,6 +1,31 @@
 <template>
   <div class="content">
     <h2 class="pick"><span class="num dest">02</span>Meet your crew</h2>
+
+    <div class="person-desc" v-if="selectedPerson">
+      <img :src="getImagePath(selectedPerson.images.png)" alt="Image" />
+      <div class="buttons">
+        <button
+          class="person-btn"
+          @click="selectPerson('Douglas Hurley')"
+        ></button>
+        <button
+          class="person-btn"
+          @click="selectPerson('Mark Shuttleworth')"
+        ></button>
+        <button
+          class="person-btn"
+          @click="selectPerson('Victor Glover')"
+        ></button>
+        <button
+          class="person-btn"
+          @click="selectPerson('Anousheh Ansari')"
+        ></button>
+      </div>
+      <h4>{{ selectPerson.role }}</h4>
+      <h3>{{ selectedPerson.name }}</h3>
+      <p class="p-desc">{{ selectedPerson.bio }}</p>
+    </div>
   </div>
 </template>
 
@@ -10,24 +35,22 @@ import data from "../assets/data.json";
 export default {
   data() {
     return {
-      destinations: [],
-      selectedDestination: null,
+      crew: [],
+      selectedPerson: null,
     };
   },
   mounted() {
-    this.destinations = data.destinations;
-    this.selectedDestination = this.destinations.find(
-      (destination) => destination.name === "Moon"
+    this.crew = data.crew;
+    this.selectedPerson = this.crew.find(
+      (crew) => crew.name === "Douglas Hurley"
     );
   },
   methods: {
     getImagePath(image) {
-      return require(`../assets/destination/${image}`);
+      return require(`../assets/crew/${image}`);
     },
-    selectDestination(destinationName) {
-      this.selectedDestination = this.destinations.find(
-        (destination) => destination.name === destinationName
-      );
+    selectPerson(crewName) {
+      this.selectedPerson = this.crew.find((crew) => crew.name === crewName);
     },
   },
 };
