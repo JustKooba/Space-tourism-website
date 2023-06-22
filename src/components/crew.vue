@@ -3,7 +3,9 @@
     <h2 class="pick"><span class="num dest">02</span>Meet your crew</h2>
 
     <div class="person-desc" v-if="selectedPerson">
-      <img :src="getImagePath(selectedPerson.images.png)" alt="Image" />
+      <span class="image-wrapper">
+        <img :src="getImagePath(selectedPerson.images.png)" alt="Image" />
+      </span>
       <div class="buttons">
         <button
           class="person-btn"
@@ -22,9 +24,9 @@
           @click="selectPerson('Anousheh Ansari')"
         ></button>
       </div>
-      <h4>{{ selectPerson.role }}</h4>
-      <h3>{{ selectedPerson.name }}</h3>
-      <p class="p-desc">{{ selectedPerson.bio }}</p>
+      <h4>{{ selectedPerson.role }}</h4>
+      <h3 class="person-name">{{ selectedPerson.name }}</h3>
+      <p class="person-bio">{{ selectedPerson.bio }}</p>
     </div>
   </div>
 </template>
@@ -64,7 +66,41 @@ h2 {
   text-align: center;
   font-size: 19px;
 }
+
+h4 {
+  color: #6c757d;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
 .num {
   color: #707070;
+}
+
+.person-desc img {
+  height: 230px;
+}
+.person-bio {
+  color: #d0d6f9;
+  margin-top: -20px;
+  font-size: 23px;
+  padding: 25px;
+}
+
+button {
+  border-radius: 50%;
+  border: none;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+}
+
+.person-name {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>
