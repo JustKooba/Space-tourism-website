@@ -9,18 +9,22 @@
       <div class="buttons">
         <button
           class="person-btn"
+          :class="{ active: selectedPerson.name === 'Douglas Hurley' }"
           @click="selectPerson('Douglas Hurley')"
         ></button>
         <button
           class="person-btn"
+          :class="{ active: selectedPerson.name === 'Mark Shuttleworth' }"
           @click="selectPerson('Mark Shuttleworth')"
         ></button>
         <button
           class="person-btn"
+          :class="{ active: selectedPerson.name === 'Victor Glover' }"
           @click="selectPerson('Victor Glover')"
         ></button>
         <button
           class="person-btn"
+          :class="{ active: selectedPerson.name === 'Anousheh Ansari' }"
           @click="selectPerson('Anousheh Ansari')"
         ></button>
       </div>
@@ -94,7 +98,7 @@ button {
   border: none;
   height: 10px;
   width: 10px;
-  background-color: #fff;
+  background-color: #6c757d;
 }
 
 .person-name {
@@ -102,5 +106,9 @@ button {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.person-btn.active {
+  background-color: #fff;
 }
 </style>
