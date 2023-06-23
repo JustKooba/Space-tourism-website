@@ -11,10 +11,10 @@
     <button class="explore" @click="handleExplore">Explore</button>
   </div>
   <div class="destinations">
-    <destinations-vue :style="{ display: destStyle }" />
+    <destinations-vue :style="{ display: destDisplay }" />
   </div>
   <div class="crew">
-    <crew />
+    <crew :style="{ display: crewDisplay }" />
   </div>
 </template>
 
@@ -30,8 +30,9 @@ export default {
   },
   data() {
     return {
-      contentDisplay: "none",
-      destStyle: "none",
+      contentDisplay: "flex",
+      destDisplay: "none",
+      crewDisplay: "none",
     };
   },
   methods: {
@@ -39,15 +40,21 @@ export default {
       console.log(clickedEl);
       if (clickedEl == "Home") {
         this.contentDisplay = "flex";
-        this.destStyle = "none";
+        this.destDisplay = "none";
+        this.crewDisplay = "none";
       } else if (clickedEl == "Destination") {
         this.contentDisplay = "none";
-        this.destStyle = "flex";
+        this.destDisplay = "flex";
+        this.crewDisplay = "none";
+      } else if (clickedEl == "Crew") {
+        this.contentDisplay = "none";
+        this.destDisplay = "none";
+        this.crewDisplay = "flex";
       }
     },
     handleExplore() {
       this.contentDisplay = "none";
-      this.destStyle = "flex";
+      this.destDisplay = "flex";
     },
   },
 };

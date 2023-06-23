@@ -5,6 +5,7 @@
     <div class="person-desc" v-if="selectedPerson">
       <span class="image-wrapper">
         <img :src="getImagePath(selectedPerson.images.png)" alt="Image" />
+        <div></div>
       </span>
       <div class="buttons">
         <button
@@ -93,7 +94,7 @@ h4 {
   padding: 25px;
 }
 
-button {
+.person-btn {
   border-radius: 50%;
   border: none;
   height: 10px;
@@ -110,5 +111,13 @@ button {
 
 .person-btn.active {
   background-color: #fff;
+}
+
+.image-wrapper div {
+  position: relative;
+  margin: auto;
+  height: 1px;
+  width: 80vw;
+  background-color: #707070;
 }
 </style>
