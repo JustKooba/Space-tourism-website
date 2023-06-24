@@ -73,22 +73,22 @@ export default {
 .menu-content {
   display: flex;
   color: #fff;
-  position: absolute;
+  position: fixed; /* Change position to fixed */
   background-color: rgba(27, 27, 27, 0.6);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  height: 100%;
   top: 0;
+  right: 0;
   width: 70vw;
   height: 100vh;
   font-family: "Barlow Condensed", sans-serif;
   transition: all 0.3s ease-in-out;
+  overflow-y: auto; /* Add overflow-y property to enable scrolling within the menu */
 }
 
 .menu-wrapper {
   transition: all 0.3s ease-in-out;
 }
-
 .menu-content ul {
   display: flex;
   flex-direction: column;
