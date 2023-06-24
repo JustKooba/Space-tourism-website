@@ -1,38 +1,41 @@
 <template>
-  <header>
-    <img src="../assets/shared/logo.svg" />
-    <div class="menu">
-      <img
-        src="../assets/shared/icon-hamburger.svg"
-        class="menu-img"
-        alt="three lines, menu"
-        @click="menuClick"
-      />
-      <div class="menu-wrapper">
-        <div class="menu-content" :style="{ display: menuDisplay }">
-          <img
-            src="../assets/shared/icon-close.svg"
-            alt="X Icon"
-            @click="menuClick"
-          />
-          <ul>
-            <li>
-              <span class="num">00</span>
-              <span @click="listClick">Home</span>
-            </li>
-            <li>
-              <span class="num">01</span>
-              <span @click="listClick">Destination</span>
-            </li>
-            <li>
-              <span class="num">02</span> <span @click="listClick"> Crew </span>
-            </li>
-            <li><span class="num">03</span> Technology</li>
-          </ul>
+  <div class="header-wrapper">
+    <header>
+      <img src="../assets/shared/logo.svg" />
+      <div class="menu">
+        <img
+          src="../assets/shared/icon-hamburger.svg"
+          class="menu-img"
+          alt="three lines, menu"
+          @click="menuClick"
+        />
+        <div class="menu-wrapper">
+          <div class="menu-content" :style="{ display: menuDisplay }">
+            <img
+              src="../assets/shared/icon-close.svg"
+              alt="X Icon"
+              @click="menuClick"
+            />
+            <ul>
+              <li>
+                <span class="num">00</span>
+                <span @click="listClick">Home</span>
+              </li>
+              <li>
+                <span class="num">01</span>
+                <span @click="listClick">Destination</span>
+              </li>
+              <li>
+                <span class="num">02</span>
+                <span @click="listClick"> Crew </span>
+              </li>
+              <li><span class="num">03</span> Technology</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
 </template>
 
 <script>
@@ -63,6 +66,9 @@ export default {
 <style>
 .menu {
   transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 20px;
+  top: 1;
 }
 .menu-content {
   display: flex;
@@ -73,9 +79,8 @@ export default {
   backdrop-filter: blur(30px);
   height: 100%;
   top: 0;
-  width: 70%;
-  right: 0.1px;
-  z-index: 1045;
+  width: 70vw;
+  height: 100vh;
   font-family: "Barlow Condensed", sans-serif;
   transition: all 0.3s ease-in-out;
 }
@@ -126,6 +131,10 @@ header {
   align-items: center;
   padding: 20px;
   margin-bottom: 25px;
+  width: 100vw;
+}
+
+.header-wrapper {
   position: absolute;
 }
 </style>
