@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content crew-cont">
     <h2 class="pick"><span class="num dest">02</span>Meet your crew</h2>
 
     <div class="person-desc" v-if="selectedPerson">
@@ -64,6 +64,17 @@ export default {
 </script>
 
 <style>
+.crew-cont {
+  background-image: url("../assets/destination/background-destination-mobile.jpg");
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 h2 {
   color: #fff;
   font-family: "Bellefair", sans-serif;

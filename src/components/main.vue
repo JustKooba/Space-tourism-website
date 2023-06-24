@@ -1,6 +1,6 @@
 <template>
   <header-vue v-on:listClick="listClick" />
-  <div class="content" :style="{ display: contentDisplay }">
+  <div class="content main-cont" :style="{ display: contentDisplay }">
     <h2 class="home-subtitle">So, you want to travel to</h2>
     <h1 class="home-title">Space</h1>
     <p class="home-desc">
@@ -70,24 +70,27 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap");
 body {
+  display: flex;
+}
+
+.main-cont {
+  height: 100vh;
+  width: 100vw;
   background-image: url("../assets/home/background-home-tablet.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
 }
 
 @media screen and (max-height: 680px) {
-  body {
+  .main-cont {
     background-image: url("../assets/home/background-home-mobile.jpg");
   }
 }
 
 @media screen and (min-width: 681px) {
-  body {
+  .main-cont {
     background-image: url("../assets/home/background-home-desktop.jpg");
   }
 }

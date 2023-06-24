@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content dest-cont">
     <h2 class="pick"><span class="num dest">01</span>Pick your destination</h2>
 
     <div class="destination-desc" v-if="selectedDestination">

@@ -126,5 +126,6 @@ header {
   align-items: center;
   padding: 20px;
   margin-bottom: 25px;
+  position: absolute;
 }
 </style>
