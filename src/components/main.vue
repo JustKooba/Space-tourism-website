@@ -17,23 +17,29 @@
   <div class="crew" :style="{ display: crewDisplay }">
     <crew-vue />
   </div>
+  <div class="technology" :style="{ display: techDisplay }">
+    <technology-vue />
+  </div>
 </template>
 
 <script>
 import headerVue from "./header.vue";
 import destinations from "./destinations.vue";
 import crewVue from "./crew.vue";
+import technology from "./technology.vue";
 export default {
   components: {
     "header-vue": headerVue,
     "destinations-vue": destinations,
     "crew-vue": crewVue,
+    "technology-vue": technology,
   },
   data() {
     return {
-      contentDisplay: "flex",
+      contentDisplay: "none",
       destDisplay: "none",
       crewDisplay: "none",
+      techDisplay: "flex",
     };
   },
   methods: {
