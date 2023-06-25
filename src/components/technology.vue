@@ -73,6 +73,18 @@ export default {
   background-size: cover;
 }
 
+@media screen and (max-height: 680px) {
+  .tech-cont {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .tech-cont {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}
+
 h2 {
   color: #fff;
   font-family: "Bellefair", sans-serif;
@@ -88,11 +100,12 @@ h2 {
 .tech-desc img {
   height: 180px;
 }
-.tech-desc {
+
+.tech-description {
   color: #d0d6f9;
   margin-top: -20px;
   font-size: 23px;
-  padding: 25px;
+  padding: 27px;
 }
 
 .tech-btn {
@@ -115,13 +128,5 @@ h2 {
 .tech-btn.active {
   background-color: #fff;
   color: black;
-}
-
-.image-wrapper div {
-  position: relative;
-  margin: auto;
-  height: 1px;
-  width: 80vw;
-  background-color: #707070;
 }
 </style>

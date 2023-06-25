@@ -74,13 +74,13 @@ export default {
 }
 
 @media screen and (max-height: 680px) {
-  .main-cont {
+  .dest-cont {
     background-image: url("../assets/destination/background-destination-mobile.jpg");
   }
 }
 
 @media screen and (min-width: 681px) {
-  .main-cont {
+  .dest-cont {
     background-image: url("../assets/destination/background-destination-desktop.jpg");
   }
 }
@@ -102,11 +102,11 @@ h2 {
 
 .pick {
   margin-bottom: 25px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .destination-desc img {
-  height: 180px;
+  height: 170px;
 }
 
 .dest-btn {

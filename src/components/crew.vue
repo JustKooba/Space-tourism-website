@@ -1,6 +1,6 @@
 <template>
   <div class="content crew-cont">
-    <h2 class="pick"><span class="num dest">02</span>Meet your crew</h2>
+    <h2 class="pick"><span class="num crew">02</span>Meet your crew</h2>
 
     <div class="person-desc" v-if="selectedPerson">
       <span class="image-wrapper">
@@ -73,6 +73,18 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media screen and (max-height: 680px) {
+  .crew-cont {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .crew-cont {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
 }
 
 h2 {

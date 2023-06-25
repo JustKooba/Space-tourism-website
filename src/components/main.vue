@@ -36,10 +36,10 @@ export default {
   },
   data() {
     return {
-      contentDisplay: "none",
+      contentDisplay: "flex",
       destDisplay: "none",
       crewDisplay: "none",
-      techDisplay: "flex",
+      techDisplay: "none",
     };
   },
   methods: {
@@ -49,14 +49,22 @@ export default {
         this.contentDisplay = "flex";
         this.destDisplay = "none";
         this.crewDisplay = "none";
+        this.techDisplay = "none";
       } else if (clickedEl == "Destination") {
         this.contentDisplay = "none";
         this.destDisplay = "flex";
         this.crewDisplay = "none";
+        this.techDisplay = "none";
       } else if (clickedEl == "Crew") {
         this.contentDisplay = "none";
         this.destDisplay = "none";
+        this.techDisplay = "none";
         this.crewDisplay = "flex";
+      } else if (clickedEl == "Technology") {
+        this.contentDisplay = "none";
+        this.destDisplay = "none";
+        this.crewDisplay = "none";
+        this.techDisplay = "flex";
       }
     },
     handleExplore() {

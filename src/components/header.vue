@@ -29,7 +29,10 @@
                 <span class="num">02</span>
                 <span @click="listClick">Crew</span>
               </li>
-              <li><span class="num">03</span> Technology</li>
+              <li>
+                <span class="num">03</span
+                ><span @click="listClick">Technology</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -81,6 +84,7 @@ export default {
   right: 0;
   width: 70vw;
   height: 100vh;
+  z-index: 1;
   font-family: "Barlow Condensed", sans-serif;
   transition: all 0.3s ease-in-out;
   overflow-y: auto;
