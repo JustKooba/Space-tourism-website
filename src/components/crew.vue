@@ -65,7 +65,7 @@ export default {
 
 <style>
 .crew-cont {
-  background-image: url("../assets/destination/background-destination-mobile.jpg");
+  background-image: url("../assets/crew/background-crew-tablet.jpg");
   height: 100vh;
   width: 100vw;
   overflow-y: hidden;

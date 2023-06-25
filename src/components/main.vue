@@ -1,5 +1,6 @@
 <template>
   <header-vue v-on:listClick="listClick" />
+
   <div class="content main-cont" :style="{ display: contentDisplay }">
     <h2 class="home-subtitle">So, you want to travel to</h2>
     <h1 class="home-title">Space</h1>
@@ -13,20 +14,20 @@
   <div class="destinations">
     <destinations-vue :style="{ display: destDisplay }" />
   </div>
-  <div class="crew">
-    <crew :style="{ display: crewDisplay }" />
+  <div class="crew" :style="{ display: crewDisplay }">
+    <crew-vue />
   </div>
 </template>
 
 <script>
 import headerVue from "./header.vue";
 import destinations from "./destinations.vue";
-import crew from "./crew.vue";
+import crewVue from "./crew.vue";
 export default {
   components: {
     "header-vue": headerVue,
     "destinations-vue": destinations,
-    crew: crew,
+    "crew-vue": crewVue,
   },
   data() {
     return {
@@ -113,6 +114,7 @@ body {
   font-size: 25px;
   letter-spacing: 2px;
   font-family: "Barlow Condensed", sans-serif;
+  margin-top: 100px;
 }
 
 .home-title {

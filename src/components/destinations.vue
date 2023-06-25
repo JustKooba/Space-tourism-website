@@ -62,7 +62,29 @@ export default {
 <style>
 .content {
   width: 100vw;
+  height: 100vh;
 }
+
+.dest-cont {
+  background-image: url("../assets/destination/background-destination-tablet.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-height: 680px) {
+  .main-cont {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .main-cont {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+}
+
 h2 {
   color: #fff;
   font-family: "Bellefair", sans-serif;
@@ -80,6 +102,7 @@ h2 {
 
 .pick {
   margin-bottom: 25px;
+  margin-top: 100px;
 }
 
 .destination-desc img {

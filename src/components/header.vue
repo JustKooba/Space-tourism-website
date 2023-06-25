@@ -27,7 +27,7 @@
               </li>
               <li>
                 <span class="num">02</span>
-                <span @click="listClick"> Crew </span>
+                <span @click="listClick">Crew</span>
               </li>
               <li><span class="num">03</span> Technology</li>
             </ul>
@@ -73,7 +73,7 @@ export default {
 .menu-content {
   display: flex;
   color: #fff;
-  position: fixed; /* Change position to fixed */
+  position: fixed;
   background-color: rgba(27, 27, 27, 0.6);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
@@ -83,7 +83,7 @@ export default {
   height: 100vh;
   font-family: "Barlow Condensed", sans-serif;
   transition: all 0.3s ease-in-out;
-  overflow-y: auto; /* Add overflow-y property to enable scrolling within the menu */
+  overflow-y: auto;
 }
 
 .menu-wrapper {
