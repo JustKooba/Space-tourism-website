@@ -104,7 +104,7 @@ body {
   }
 }
 
-@media screen and (min-width: 681px) {
+@media screen and (min-width: 870px) {
   .main-cont {
     background-image: url("../assets/home/background-home-desktop.jpg");
   }

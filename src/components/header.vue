@@ -67,6 +67,12 @@ export default {
 </script>
 
 <style>
+@media (min-width: 750px) {
+  .header-wrapper {
+    display: none;
+  }
+}
+
 .menu {
   transition: all 0.3s ease-in-out;
   position: absolute;
